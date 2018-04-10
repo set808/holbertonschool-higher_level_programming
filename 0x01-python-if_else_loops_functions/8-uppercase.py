@@ -6,4 +6,4 @@ def uppercase(str):
         if 97 <= char <= 122:
             char -= 32
         new += chr(char)
-    print(new)
+    print('{:s}'.format(new))
