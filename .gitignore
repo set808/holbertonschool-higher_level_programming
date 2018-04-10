@@ -10,6 +10,7 @@
 **/\#*
 # Ignore main files
 **/*main.c
+**/*main.py
 # Ignore object files and libraries
 *.o
 *.ko
