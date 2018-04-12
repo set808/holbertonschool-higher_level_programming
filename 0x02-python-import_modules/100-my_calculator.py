@@ -3,7 +3,7 @@ from calculator_1 import add, sub, mul, div
 
 
 def is_operator(operator):
-    operators = {'+', '-', '*', '/'}
+    operators = ['+', '-', '*', '/']
     for i in operators:
         if operator == i:
             return True
@@ -15,10 +15,10 @@ def calc(argv):
     b = int(argv[3])
     operator = argv[2]
 
-    if len(argv) !=  4:
+    if len(argv) != 4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
-    if  is_operator(argv[2]) == False:
+    if is_operator(operator) is False:
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
 
