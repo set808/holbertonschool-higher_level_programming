@@ -11,9 +11,6 @@ def is_operator(operator):
 
 
 def calc(argv):
-    a = int(argv[1])
-    b = int(argv[3])
-    operator = argv[2]
 
     if len(argv) != 4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
@@ -21,6 +18,10 @@ def calc(argv):
     if is_operator(operator) is False:
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
+
+    a = int(argv[1])
+    b = int(argv[3])
+    operator = argv[2]
 
     if operator == '+':
         print('{:d} + {:d} = {:d}'.format(a, b, add(a, b)))
