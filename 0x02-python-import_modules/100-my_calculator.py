@@ -15,10 +15,10 @@ def calc(argv):
     b = int(argv[3])
     operator = argv[2]
 
-    if len(argv) is not 4:
+    if len(argv) !=  4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
-    if not is_operator(argv[2]):
+    if  is_operator(argv[2]) == False:
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
 
