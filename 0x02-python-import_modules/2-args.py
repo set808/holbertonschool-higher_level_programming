@@ -2,10 +2,14 @@
 
 
 def args(argv):
-    if len(argv) > 2 or len(argv) == 1:
-        print('{:d} arguments:'.format(len(argv) - 1))
+    arg_num = len(argv) - 1
+
+    if len(argv) > 2:
+        print('{:d} arguments:'.format(arg_num))
+    elif len(argv) == 1:
+        print('{:d} arguments.'.format(arg_num))
     else:
-        print('{:d} argument:'.format(len(argv) - 1))
+        print('{:d} argument:'.format(arg_num))
 
     for i, arg in enumerate(argv[1:], 1):
             print("{:d}: {:s}".format(i, arg))
