@@ -4,5 +4,7 @@ def is_even(n):
         return True
     else:
         return False
+
+    
 def divisible_by_2(my_list=[]):
     return tuple(map(is_even, my_list))
