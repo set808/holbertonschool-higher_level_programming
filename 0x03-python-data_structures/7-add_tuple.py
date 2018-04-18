@@ -13,4 +13,4 @@ def tuple_check(t):
 def add_tuple(tuple_a=(), tuple_b=()):
     tuple_a = tuple_check(tuple_a)
     tuple_b = tuple_check(tuple_b)
-    return tuple(map(sum, zip(tuple_a, tuple_b)))
+    return tuple(map(sum, zip(tuple_a[:2], tuple_b[:2])))
