@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def tuple_check(t):
     length = len(t)
     if length == 0:
