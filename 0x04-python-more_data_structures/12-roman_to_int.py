@@ -9,10 +9,13 @@ def roman_to_int(roman_string):
     if roman_string:
         decimal = list(map(get_roman_value, list(roman_string)))
         result = 0
-        for i in range (len(decimal) - 1):
+        for i in range(len(decimal) - 1):
             if decimal[i] < decimal[i + 1]:
                 result -= decimal[i]
             else:
                 result += decimal[i]
         result += decimal[len(decimal) - 1]
         return result
+    else:
+        return None
+
