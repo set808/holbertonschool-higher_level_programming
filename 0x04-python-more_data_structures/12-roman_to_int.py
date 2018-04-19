@@ -6,10 +6,10 @@ def get_roman_value(char=''):
 
 
 def roman_to_int(roman_string):
-    if roman_string:
+    if isinstance(roman_string, str):
         decimal = list(map(get_roman_value, list(roman_string)))
         result = 0
-        for i in range(len(decimal) - 1):
+        for i in range(0, len(decimal) - 1):
             if decimal[i] < decimal[i + 1]:
                 result -= decimal[i]
             else:
@@ -17,5 +17,4 @@ def roman_to_int(roman_string):
         result += decimal[len(decimal) - 1]
         return result
     else:
-        return None
-
+        return 0
