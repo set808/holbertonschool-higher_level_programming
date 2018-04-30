@@ -11,3 +11,7 @@ def main():
             resutl = a + b
             break
     return result
+
+if __name__ == '__main__':
+    import dis
+    dis.dis(main)
