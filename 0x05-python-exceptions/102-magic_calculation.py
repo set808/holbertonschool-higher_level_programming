@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-def main():
+
+
+def magic_calculation(a, b):
     result = 0;
     for i in range(1, 3):
         try:
@@ -14,4 +16,4 @@ def main():
 
 if __name__ == '__main__':
     import dis
-    dis.dis(main)
+    dis.dis(magic_calculation)
