@@ -3,6 +3,7 @@
 This module defines a Square class
 """
 
+
 class Square:
     """Class that defines a square.
 
@@ -46,7 +47,7 @@ class Square:
         value (int): The value of the new size.
         """
         if type(value) != int:
-           raise TypeError("size must be an integer")
+            raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value

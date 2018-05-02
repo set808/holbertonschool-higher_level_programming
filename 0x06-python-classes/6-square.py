@@ -3,13 +3,14 @@
 This module defines a Square class
 """
 
+
 class Square:
     """Class that defines a square.
 
     Attributes:
          size (str): Size of the Square
      """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializer function for a Square.
 
         Args:
@@ -35,11 +36,10 @@ class Square:
         else:
             x, y = self.position
             for i in range(y):
-                print();
+                print()
             for i in range(self.size):
                 print(' ' * x, end='')
                 print('#' * self.size)
-
 
     @property
     def size(self):
@@ -58,7 +58,7 @@ class Square:
         value (int): The value of the new size.
         """
         if type(value) != int:
-           raise TypeError("size must be an integer")
+            raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
