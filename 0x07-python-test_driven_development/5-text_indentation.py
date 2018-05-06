@@ -14,3 +14,4 @@ def text_indentation(text):
                 (formatted[i] == ' ' and formatted[i - 1] == ' ')):
                 continue;
             print('{:s}'.format(v), end='')
+ 

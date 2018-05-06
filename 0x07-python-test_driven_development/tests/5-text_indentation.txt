@@ -1,0 +1,22 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("My name is Spence. Chickens fly faster than birds: Apples are the greatest company that one can keep!")
+My name is Spence.
+<BLANKLINE>
+Chickens fly faster than birds:
+<BLANKLINE>
+Apples are the greatest company that one can keep!
+
+>>> text_indentation("    My name is Spence. Chickens fly faster than birds: Apples are the greatest company that one can keep!    ")
+My name is Spence.
+<BLANKLINE>
+Chickens fly faster than birds:
+<BLANKLINE>
+Apples are the greatest company that one can keep!
+
+>>> text_indentation("My name is     Spence. Chickens fly faster than birds: Apples are the greatest company that one can keep!")
+My name is Spence.
+<BLANKLINE>
+Chickens fly faster than birds:
+<BLANKLINE>
+Apples are the greatest company that one can keep!
