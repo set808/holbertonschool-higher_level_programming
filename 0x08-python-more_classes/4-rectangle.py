@@ -35,7 +35,7 @@ class Rectangle:
             This representation can be useed to create a new Rectangle object.
 
         Returns:
-            A string that looks like a new Rectangle object
+            A string that looks like a new Rectangle object.
         """
         return ('Rectangle({:d}, {:d})'.format(self.width, self.height))
 
