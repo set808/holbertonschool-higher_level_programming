@@ -3,9 +3,11 @@
 This module defines a class called Rectangle.
 """
 
+
 class Rectangle:
     """A class that defines a Rectangle object.
     """
+
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle object.
 
@@ -59,4 +61,3 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
-

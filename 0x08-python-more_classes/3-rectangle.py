@@ -3,9 +3,11 @@
 This module defines a class called Rectangle.
 """
 
+
 class Rectangle:
     """A class that defines a Rectangle object.
     """
+
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle object.
 
@@ -23,6 +25,7 @@ class Rectangle:
             return ''
         else:
             return '\n'.join(('#' * self.width) for row in range(self.height))
+
     @property
     def width(self):
         """Returns the width of the Rectangle object.
