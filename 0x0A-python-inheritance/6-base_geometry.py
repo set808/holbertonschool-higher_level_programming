@@ -3,10 +3,12 @@
 Defines a class BaseGeometry
 '''
 
+
 class BaseGeometry:
     '''BaseGeometry class
 
     '''
+
     def area(self):
         '''defines area function
 

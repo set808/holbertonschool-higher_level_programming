@@ -3,6 +3,7 @@
 Defines a function to check to see if object inherits from a class
 '''
 
+
 def inherits_from(obj, a_class):
     '''Checks if object inherits from a class
 
@@ -13,6 +14,6 @@ def inherits_from(obj, a_class):
     Return:
     Returns True if it does inherit, False otherwise.
     '''
-    if type(obj) == a_class:
+    if isinstance(obj, a_class):
         return False
     return isinstance(obj, a_class)

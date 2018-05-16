@@ -3,15 +3,18 @@
 Defines two classes BaseGeometry and Rectangle
 '''
 
+
 class BaseGeometry:
     '''BaseGeometry class
 
     '''
+
     def area(self):
         '''defines area function
 
         '''
         raise Exception('area() is not implemented')
+
     def integer_validator(self, name, value):
         '''Validates value
 
@@ -20,7 +23,7 @@ class BaseGeometry:
             value (int): some value that wasn't explained
         '''
 
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError('{:s} must be an integer'.format(name))
         if value <= 0:
             raise ValueError('{:s} must be greater than 0'.format(name))
@@ -30,6 +33,7 @@ class Rectangle(BaseGeometry):
     ''' Rectangle class inherits from BaseGeometry
 
     '''
+
     def __init__(self, width, height):
         """Initializes a Rectangle object.
         Args:
@@ -41,10 +45,8 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-
     def __str__(self):
         return '[Rectangle] {:d}/{:d}'.format(self.__width, self.__height)
-
 
     def area(self):
         '''defines area function
