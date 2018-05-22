@@ -3,6 +3,10 @@
 Defines unittests for Base Class
 '''
 import unittest
+import json
+import sys
+import os
+from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
@@ -18,6 +22,10 @@ class TestBaseClass(unittest.TestCase):
         cls.b2 = Base()
         cls.b3 = Base(12)
         cls.b4 = Base()
+        cls.r1 = Rectangle(3, 5, 1, id=9)
+        cls.r3 = Rectangle(2, 4, id=11)
+        cls.s1 = Square(5, id=99)
+        cls.s2 = Square(7, 9, 1, id=78)
 
     @classmethod
     def tearDownClass(cls):
@@ -71,15 +79,6 @@ class TestBaseClass(unittest.TestCase):
         self.assertTrue(hasattr(Base, "from_json_string"))
         self.assertTrue(hasattr(Base, "save_to_file"))
         self.assertTrue(hasattr(Base, "load_from_file"))
-
-
-    @classmethod
-    def setUpClass(cls):
-        Base._Base__nb_objects == 0
-        cls.r1 = Rectangle(3, 5, 1, id=9)
-        cls.r3 = Rectangle(2, 4, id=11)
-        cls.s1 = Square(5, id=99)
-        cls.s2 = Square(7, 9, 1, id=78)
 
     def test_to_json_string_AND_from_json_string(self):
         list_input = [
