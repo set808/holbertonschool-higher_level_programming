@@ -111,8 +111,6 @@ class TestSquareClass(unittest.TestCase):
         num_lines = sum(1 for line in open('Square.json'))
         self.assertGreater(num_lines, 0)
 
-    def test_square_
-
     def test_square_display(self):
         Base._Base__nb_objects = 0
         old_stdout = sys.stdout
