@@ -29,7 +29,7 @@ class Rectangle(Base):
         '''Prints the rectangle
 
         '''
-        return ('[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'
+        return ('[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}'
                 .format(self.id, self.x, self.y, self.width, self.height))
 
     @property
