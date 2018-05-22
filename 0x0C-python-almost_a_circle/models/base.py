@@ -17,6 +17,11 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        '''Initializes a Base object
+
+        Args:
+            id (int): the id of the Base object
+        '''
         if id is not None:
             self.id = id
         else:
@@ -58,7 +63,10 @@ class Base:
         Returns:
             instance with all attributes set
         '''
-        new = cls(1, 1)
+        if cls.__name__ == 'Rectangle':
+            new = cls(1, 1)
+        if cls.__name__ == 'Square':
+            new = cls(1)
         new.update(**dictionary)
         return new
 
