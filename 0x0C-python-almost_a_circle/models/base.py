@@ -51,7 +51,7 @@ class Base:
         Return:
             returns a list of JSON strings
         '''
-        return json.loads(json_string or [])
+        return json.loads(json_string or '[]')
 
     @classmethod
     def create(cls, **dictionary):
