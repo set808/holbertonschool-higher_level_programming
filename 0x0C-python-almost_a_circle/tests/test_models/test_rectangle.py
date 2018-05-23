@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-import unittest
+import unittest, sys, pep8
 from models.rectangle import Rectangle
 from models.base import Base
-import sys
 from io import StringIO
 
 
@@ -25,6 +24,16 @@ class TestRectangle(unittest.TestCase):
         Base._Base__nb_objects = 0
         cls.r1 = Rectangle(10, 2)
         cls.r3 = Rectangle(2, 4, 2, 2, 12)
+
+    def test_style_base(self):
+        """
+        Tests for pep8
+        """
+        style = pep8.StyleGuide(quiet=True)
+        p = style.check_files(['tests/test_models/test_rectangle.py'])
+        self.assertEqual(p.total_errors, 0, "fix pep8")
+        p = style.check_files(['models/rectangle.py'])
+        self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_ids(self):
         self.assertEqual(self.r1.id, 1)

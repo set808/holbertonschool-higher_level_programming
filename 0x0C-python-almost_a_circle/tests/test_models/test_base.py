@@ -2,10 +2,7 @@
 '''
 Defines unittests for Base Class
 '''
-import unittest
-import json
-import sys
-import os
+import unittest, json, sys, os, pep8
 from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
@@ -33,6 +30,16 @@ class TestBaseClass(unittest.TestCase):
         del cls.b2
         del cls.b3
         del cls.b4
+
+def test_style_base(self):
+        """
+        Tests for pep8
+        """
+        style = pep8.StyleGuide(quiet=True)
+        p = style.check_files(['tests/test_models/test_base.py'])
+        self.assertEqual(p.total_errors, 0, "fix pep8")
+        p = style.check_files(['models/base.py'])
+        self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_base_class_docstring(self):
         self.assertIsNotNone(Base.__doc__)

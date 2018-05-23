@@ -2,9 +2,7 @@
 '''
 Defines unittest for Square class
 '''
-import unittest
-import sys
-import os
+import unittest, sys, os, pep8
 from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
@@ -25,6 +23,16 @@ class TestSquareClass(unittest.TestCase):
     def tearDownClass(cls):
         '''Removing Testing Instances'''
         pass
+
+    def test_style_base(self):
+        """
+        Tests for pep8
+        """
+        style = pep8.StyleGuide(quiet=True)
+        p = style.check_files(['tests/test_models/test_square.py'])
+        self.assertEqual(p.total_errors, 0, "fix pep8")
+        p = style.check_files(['models/square.py'])
+        self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_square_class_docstring(self):
         self.assertIsNotNone(Square.__doc__)
