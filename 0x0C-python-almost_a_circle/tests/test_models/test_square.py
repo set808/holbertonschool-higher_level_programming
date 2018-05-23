@@ -108,7 +108,7 @@ class TestSquareClass(unittest.TestCase):
         sq2 = Square(15)
         Square.save_to_file([sq1, sq2])
         self.assertTrue(os.path.isfile('Square.json'))
-        num_lines = sum(1 for line in open('Square.json'))
+        num_lines = sum(1 for line in open('Square.json').close())
         self.assertGreater(num_lines, 0)
 
     def test_square_display(self):

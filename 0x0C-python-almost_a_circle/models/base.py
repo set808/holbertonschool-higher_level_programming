@@ -100,4 +100,3 @@ class Base:
             return ([cls.create(**x) for x in list_dict])
         except FileNotFoundError:
             return ([])
-
