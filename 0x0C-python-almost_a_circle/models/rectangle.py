@@ -123,8 +123,8 @@ class Rectangle(Base):
         '''Prints the rectangle to stdout
 
         '''
-        if self.x > 0:
-            print('\n' * self.y, end='')
+        for i in range(self.y):
+            print()
         for i in range(self.height):
             print('{:s}{:s}'.format(' ' * self.x, '#' * self.width))
 
