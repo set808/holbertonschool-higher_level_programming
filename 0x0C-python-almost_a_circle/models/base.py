@@ -94,7 +94,7 @@ class Base:
         Return:
             returns a list of instances form a JSON string
         '''
-        if os.path.isfile('{}.json'.format(cls.__name__)) is False:
+        if os.path.exists('{}.json'.format(cls.__name__)) is False:
             return []
         with open(cls.__name__ + '.json', 'r') as f:
             list_dict = cls.from_json_string(f.read())
