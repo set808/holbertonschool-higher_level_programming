@@ -94,21 +94,10 @@ class Base:
         Return:
             returns a list of instances form a JSON string
         '''
-        if os.path.exists('{}.json'.format(cls.__name__)) is False:
-            return []
-        with open(cls.__name__ + '.json', 'r') as f:
-            list_dict = cls.from_json_string(f.read())
-            return [cls.create(**x) for x in list_dict]
+        try:
+            with open(cls.__name__ + '.json', 'r') as f:
+                list_dict = cls.from_json_string(f.read())
+            return ([cls.create(**x) for x in list_dict])
+        except FileNotFoundError:
+            return ([])
 
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        '''Saves a list of objects to a CSV file
-
-        Args:
-            list_objs (list): list of objects to save
-        '''
-        if cls.__name__ == 'Rectangle':
-            keys = ['id', 'width', 'height', 'x', 'y']
-        else:
-            keys = ['id', 'size', 'x', 'y']
-        with open('{:s}.csv'.format(cls.__name__), 'w') as f:
