@@ -31,13 +31,11 @@ class TestBaseClass(unittest.TestCase):
         del cls.b3
         del cls.b4
 
-def test_style_base(self):
+    def test_style_base(self):
         """
         Tests for pep8
         """
         style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['tests/test_models/test_base.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")
         p = style.check_files(['models/base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 

@@ -30,8 +30,6 @@ class TestRectangle(unittest.TestCase):
         Tests for pep8
         """
         style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['tests/test_models/test_rectangle.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")
         p = style.check_files(['models/rectangle.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
