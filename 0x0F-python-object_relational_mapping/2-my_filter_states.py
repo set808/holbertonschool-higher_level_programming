@@ -17,7 +17,8 @@ def main(argv):
     ORDER BY id ASC'.format(argv[4]))
 
     for row in cur.fetchall():
-        print(row)
+        if row[1] == argv[4]:
+            print(row)
 
     db.close()
 
