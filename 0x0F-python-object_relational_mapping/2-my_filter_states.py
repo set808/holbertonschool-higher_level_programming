@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Function that filters by user input'''
 import MySQLdb
+from sys import argv
 
 
 def main(argv):
@@ -21,5 +22,4 @@ def main(argv):
     db.close()
 
 if __name__ == '__main__':
-    from sys import argv
     main(argv)
