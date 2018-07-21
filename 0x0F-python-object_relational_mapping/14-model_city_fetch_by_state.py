@@ -16,15 +16,12 @@ def main(argv):
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    new = State(name="Louisiana")
-    session.add(new)
-    session.commit()
-    for state in session.query(State).filter(
-            State.name == "Louisiana").order_by(
-            State.id).all():
-
-        print("{}".format(state.id))
+    for city, state in session.query(
+        City, State).filter(
+        City.state_id == State.id).order_by(
+            City.id).all():
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
-
+    
 if __name__ == "__main__":
     main(argv)

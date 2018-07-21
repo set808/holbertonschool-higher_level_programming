@@ -16,17 +16,9 @@ def main(argv):
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    new = State(name="Louisiana")
-    session.add(new)
+    session.query(State).filter(State.id == 2).update(
+        {State.name: 'New Mexico'})
     session.commit()
-    for state in session.query(State).filter(
-            State.name == "Louisiana").order_by(
-            State.id).all():
-
-        print("{}".format(state.id))
-    session.close()
-
-
 
 if __name__ == "__main__":
     main(argv)

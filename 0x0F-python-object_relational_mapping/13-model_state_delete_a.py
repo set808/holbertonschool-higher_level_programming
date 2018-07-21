@@ -2,8 +2,8 @@
 """List objects that contain the letter a """
 from sys import argv
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import (create_engine)
-from sqlalchemy import  update
 from sqlalchemy.orm import sessionmaker
 
 
@@ -16,15 +16,10 @@ def main(argv):
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    new = State(name="Louisiana")
-    session.add(new)
-    session.commit()
-    for state in session.query(State).filter(
-            State.name == "Louisiana").order_by(
-            State.id).all():
 
-        print("{}".format(state.id))
-    session.close()
+    for state in session.query(State).filter(State.name.like('%a%')):
+        session.delete(state)
+    session.commit()
 
 if __name__ == "__main__":
     main(argv)
