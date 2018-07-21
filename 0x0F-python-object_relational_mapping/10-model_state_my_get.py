@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 def main(argv):
-    
+
     flag = 0
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(argv[1],
@@ -25,8 +25,6 @@ def main(argv):
     if flag == 0:
         print("Not found")
     session.close()
-
-
 
 if __name__ == "__main__":
     main(argv)

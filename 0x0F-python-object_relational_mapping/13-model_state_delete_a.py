@@ -2,8 +2,8 @@
 """List objects that contain the letter a """
 from sys import argv
 from model_state import Base, State
-from model_city import City
 from sqlalchemy import (create_engine)
+from sqlalchemy import update
 from sqlalchemy.orm import sessionmaker
 
 

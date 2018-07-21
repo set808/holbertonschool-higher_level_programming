@@ -25,7 +25,5 @@ def main(argv):
         print("{}".format(state.id))
     session.close()
 
-
-
 if __name__ == "__main__":
     main(argv)
