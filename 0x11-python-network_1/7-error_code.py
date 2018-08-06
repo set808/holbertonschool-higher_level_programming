@@ -3,11 +3,12 @@
 import requests
 
 def main(args):
-        r.requests.get(args[1])
-        if r.status_code >= 400:
-            print('Error code: {}'.format(r.status_code))
-        else:
-            print(r.text)
+    r = requests.get(args[1])
+    try:
+        r.raise_for_status()
+        print(r.text)
+    except requests.exceptions.HTTPError:
+        print('Error code: {}'.format(r.status_code))
 
 if __name__ == '__main__':
     import sys
