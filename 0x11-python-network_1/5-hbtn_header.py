@@ -4,9 +4,11 @@ import requests
 
 
 def main(args):
-    r = requests.get(args[1])
-    print(r.headers['X-Request-Id'])
-
+    try:
+        r = requests.get(args[1])
+        print(r.headers['X-Request-Id'])
+    except KeyError:
+        pass
 if __name__ == '__main__':
     import sys
     main(sys.argv)
