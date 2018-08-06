@@ -8,7 +8,9 @@ def main(args):
     url = args[1]
     req = urllib.request.Request(url)
     try:
-        urllib.request.urlopen(req)
+        with urllib.request.urlopen(req) as response:
+            body = response.read()
+            print(body.decode('utf8'))
     except urllib.error.URLError as e:
         print('Error code: {}'.format(e.code))
 
