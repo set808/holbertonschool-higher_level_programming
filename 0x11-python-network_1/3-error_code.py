@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Defines script to display the body of response'''
-import urllib
+import urllib.request
 
 
 def main(args):
