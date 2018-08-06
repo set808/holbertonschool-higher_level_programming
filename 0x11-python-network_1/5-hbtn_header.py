@@ -9,6 +9,8 @@ def main(args):
         print(r.headers['X-Request-Id'])
     except KeyError:
         pass
+
+
 if __name__ == '__main__':
     import sys
     main(sys.argv)

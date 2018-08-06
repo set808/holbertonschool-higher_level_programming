@@ -11,6 +11,7 @@ def main(args):
             header = response.info()
             print(header['X-Request-Id'])
 
+
 if __name__ == '__main__':
     import sys
     main(sys.argv)

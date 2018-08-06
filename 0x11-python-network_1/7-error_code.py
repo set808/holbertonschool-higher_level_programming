@@ -2,6 +2,7 @@
 '''Scirpt for Error Codes'''
 import requests
 
+
 def main(args):
     r = requests.get(args[1])
     try:
@@ -9,6 +10,7 @@ def main(args):
         print(r.text)
     except requests.exceptions.HTTPError:
         print('Error code: {}'.format(r.status_code))
+
 
 if __name__ == '__main__':
     import sys
