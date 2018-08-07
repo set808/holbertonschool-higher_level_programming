@@ -18,6 +18,7 @@ def main(args):
     except ValueError:
         print('Not a valid JSON')
 
+
 if __name__ == '__main__':
     import sys
     main(sys.argv)

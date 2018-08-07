@@ -11,10 +11,10 @@ def main(args):
     r = requests.get(url, auth=(username, password))
     try:
         print(r.json().get('id'))
-    except:
+    except BaseException:
         pass
+
 
 if __name__ == '__main__':
     import sys
     main(sys.argv)
-
