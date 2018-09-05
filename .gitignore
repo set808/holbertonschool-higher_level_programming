@@ -11,6 +11,7 @@
 # Ignore main files
 **/*main.c
 **/*main.py
+**/*main.js
 # Ignore object files and libraries
 *.o
 *.ko
