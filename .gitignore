@@ -12,6 +12,7 @@
 **/*main.c
 **/*main.py
 **/*main.js
+**/*main.html
 # Ignore object files and libraries
 *.o
 *.ko
